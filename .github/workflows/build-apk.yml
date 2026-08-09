@@ -15,10 +15,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build APK with Buildozer
-        uses: ArtemGrize/Buildozer-Action@v1
+        uses: ArtemSBulgakov/buildozer-action@v1
         id: buildozer
         with:
           command: buildozer android debug
+          buildozer_version: master
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
